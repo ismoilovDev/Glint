@@ -1,4 +1,13 @@
 AOS.init();
+$(window).on("load", loadFunc)
+function loadFunc() {
+    setTimeout(() => {
+        $('#loading-anime').css('opacity', '0');  
+        setTimeout(() => {
+            $('#loading-anime').css('display', 'none');       
+        }, 700)
+    }, 4000);    
+} 
 $('#p-prevois').click(function() {
     $('p#one').toggleClass('active');
     $('p#two').toggleClass('active');
